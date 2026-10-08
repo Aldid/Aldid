@@ -16,28 +16,36 @@ I build AI systems that connect models to real business infrastructure: CRMs, AP
 - **18/18 agreement (100%)** on booking readiness and next-question routing against expert human baselines.
 - Comprehensive test suite of **511 automated pytest unit & integration tests** ensuring 100% regression stability.
 
-#### 2. [Auto Supply Chain Simulator](https://github.com/Aldid/zara-supply-chain-sim)
+#### 2. [Production RAG & Evaluation System](https://github.com/Aldid/production-rag-system)
+**Enterprise Hybrid Retrieval Service, pgvector Adapter & 100-Case Evaluation Harness**  
+*Python 3.11 · FastAPI · PostgreSQL (pgvector) · Docker · GitHub Actions · Pydantic*
+- Enterprise semantic retrieval service with hybrid search (dense embeddings + BM25) and Reciprocal Rank Fusion (RRF k=60).
+- Exposes structured REST endpoints (`/api/v1/query`, `/api/v1/ingest`, `/api/v1/evaluate`) with 3-layer security defense (prompt injection detection, PII redactor, strict citation enforcement).
+- Automated 100-case evaluation harness achieving **96% Hit-Rate@1** and **97.3% Context Faithfulness** across 5 business domains, backed by 25 unit tests.
+- Packaged with multi-stage `Dockerfile` and `docker-compose.yml` with automated GitHub Actions CI.
+
+#### 3. [Auto Supply Chain Simulator](https://github.com/Aldid/zara-supply-chain-sim)
 **Interactive Supply Chain Digital Twin & Agile Replenishment Simulator**  
-*React 19 · TypeScript · Vite · Tailwind CSS · Recharts · Vercel*
+*React 19 · TypeScript · Vite · Tailwind CSS · Recharts · Vercel · Docker*
 - Interactive web model demonstrating agile fashion supply chains and base-stock replenishment policies across international air and truck routes (Milan, Istanbul, New York).
 - 6-week dynamic scenario engine modeling demand fluctuations, stockouts, freight trade-offs, and financial P&L.
-- Responsive data visualization dashboard deployed to Vercel.
+- Responsive data visualization dashboard deployed to Vercel with multi-stage Docker and automated CI.
 
-#### 3. [LeadFlow Engine](https://github.com/Aldid/leadflow-engine)
+#### 4. [LeadFlow Engine](https://github.com/Aldid/leadflow-engine)
 **AI-Powered Lead Intelligence & Verification Pipeline**  
 *TypeScript · Node.js · Playwright · JSON Schema · AJV · REST APIs*
 - Multi-agent web research pipeline extracting and validating commercial entity data across multiple sources.
 - Strict schema enforcement with JSON Schema/AJV ensuring zero malformed payloads enter CRM ingestion.
 - Resilient Playwright crawling algorithms with adaptive rate limiting and session persistence.
 
-#### 4. [Browser Automation & Workflow Engine](https://github.com/Aldid/browser-automation-engine)
+#### 5. [Browser Automation & Workflow Engine](https://github.com/Aldid/browser-automation-engine)
 **Headless Browser Automation & Deterministic Form Interaction Engine**  
 *TypeScript · Node.js · Playwright · CDP · JSON State Engine*
 - Automated opportunity discovery, multi-factor fit scoring, and resilient browser form interaction workflows.
 - Safety gate detecting Cloudflare Turnstiles, reCAPTCHAs, and 2FA challenges, safely pausing for human-in-the-loop review.
 - Validated with **104 automated tests across 11 test suites** (100% pass rate).
 
-#### 5. [Sarqyt Mobile App](https://github.com/Aldid/sarqyt)
+#### 6. [Sarqyt Mobile App](https://github.com/Aldid/sarqyt)
 **Food Discovery & Surplus Deals Platform (Ongoing Prototype)**  
 *Flutter 3 · Dart · Clean Architecture · Riverpod · GoRouter · Supabase*
 - Cross-platform mobile marketplace prototype connecting food businesses with customers to reduce food waste in Kazakhstan.
@@ -47,11 +55,12 @@ I build AI systems that connect models to real business infrastructure: CRMs, AP
 
 ### 🛠️ Technical Stack & Tools
 
-- **Core Specialization:** AI Automation, Agentic Workflows, Structured Outputs (Pydantic, JSON Schema), Prompt Injection Defense, Browser Automation, CRM Automation.
+- **Core Specialization:** AI Automation, Agentic Workflows, Retrieval-Augmented Generation (RAG), Hybrid Search (pgvector + BM25), Structured Outputs (Pydantic, JSON Schema), Browser Automation, CRM Automation.
 - **Languages:** Python (3.11/3.13), TypeScript, JavaScript (ESNext), Node.js, SQL.
-- **Frameworks & UI:** React 19, Vite, Tailwind CSS, Recharts.
-- **Automation & Testing:** Playwright, Chrome DevTools Protocol (CDP), pytest (500+ tests), Jest, JSON Schema / AJV.
-- **Backend & Cloud:** Supabase, PostgreSQL, SQLite, REST APIs, Vercel, Git / GitHub.
+- **Frameworks & UI:** FastAPI, React 19, Vite, Tailwind CSS, Recharts.
+- **DevOps & Containers:** Docker, Docker Compose, GitHub Actions CI/CD, Git.
+- **Automation & Testing:** Playwright, Chrome DevTools Protocol (CDP), pytest (640+ tests across repos), Jest/Node test runner, JSON Schema / AJV.
+- **Backend & Cloud:** PostgreSQL (pgvector, Row Level Security), Supabase, SQLite, REST APIs, Vercel.
 
 ---
 
